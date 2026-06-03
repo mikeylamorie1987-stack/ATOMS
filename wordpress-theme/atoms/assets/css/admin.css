@@ -1,0 +1,19 @@
+/* Admin Styles for ATOMS Theme */
+
+.wp-admin .atoms-theme-notice {
+  background: linear-gradient(135deg, #121212 0%, #18181B 100%);
+  border-left: 4px solid #C00000;
+  color: #F3F4F6;
+  padding: 12px 16px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.wp-admin .atoms-theme-notice h2 {
+  color: #C00000;
+  margin-top: 0;
+}
+
+.atoms-block-editor {
+  --wp-admin-theme-color: #C00000;
+}
