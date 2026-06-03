@@ -1,0 +1,370 @@
+/*
+Elementor Theme Name: ATOMS - Noble Anarchy Collective
+Elementor Theme URI: https://atoms.dev
+Author: Noble Anarchy Collective
+Author URI: https://atoms.dev
+Description: Elementor custom styles for ATOMS dark theme. Features dark color palette, animations, and parallax effects.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: atoms-elementor
+Domain Path: /languages
+Tags: elementor, dark, animations, custom-styles
+*/
+
+/* ========================================
+   ATOMS - Elementor Custom Styles
+   ======================================== */
+
+:root {
+  /* Color Palette */
+  --color-background: #121212;
+  --color-surface: #18181B;
+  --color-card: #1F1F23;
+  --color-elevated: #26262B;
+  --color-text-primary: #F3F4F6;
+  --color-text-secondary: #D1D5DB;
+  --color-text-muted: #9CA3AF;
+  --color-border: #34343A;
+  --color-cta-red: #C00000;
+  --color-hover-red: #D90429;
+  --color-dark-gold: #A37500;
+  --color-copper: #B46A3C;
+  --color-silver: #B8BDC7;
+  --color-ash-white: #E8E8E5;
+  
+  /* Typography */
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-accent: 'Cinzel', serif;
+}
+
+/* ========================================
+   Elementor Container Styles
+   ======================================== */
+
+.elementor-container {
+  max-width: 1200px;
+}
+
+.elementor-section {
+  padding: 3rem 2rem;
+}
+
+.elementor-section.elementor-section-full-height {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ========================================
+   Elementor Typography
+   ======================================== */
+
+.elementor h1,
+.elementor h2,
+.elementor h3,
+.elementor h4,
+.elementor h5,
+.elementor h6 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-primary);
+}
+
+.elementor-heading-title {
+  font-weight: 700;
+}
+
+.elementor-text-editor {
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+}
+
+/* ========================================
+   Elementor Buttons
+   ======================================== */
+
+.elementor-button {
+  background-color: var(--color-cta-red);
+  color: var(--color-background);
+  border: 2px solid var(--color-cta-red);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.elementor-button:hover {
+  background-color: transparent;
+  color: var(--color-cta-red);
+  transform: translateY(-2px);
+}
+
+.elementor-button.elementor-button-secondary {
+  background-color: transparent;
+  color: var(--color-cta-red);
+}
+
+.elementor-button.elementor-button-secondary:hover {
+  background-color: var(--color-cta-red);
+  color: var(--color-background);
+}
+
+/* ========================================
+   Elementor Image Widgets
+   ======================================== */
+
+.elementor-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.elementor-image-box-img {
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   Elementor Card/Box Widgets
+   ======================================== */
+
+.elementor-card,
+.elementor-icon-box {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.elementor-card:hover,
+.elementor-icon-box:hover {
+  border-color: var(--color-cta-red);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(192, 0, 0, 0.2);
+}
+
+/* ========================================
+   Elementor Grid/Column
+   ======================================== */
+
+.elementor-column {
+  padding: 1rem;
+}
+
+.elementor-column > .elementor-widget-wrap {
+  margin: 0;
+}
+
+/* ========================================
+   Elementor Forms
+   ======================================== */
+
+.elementor-field-type-text input,
+.elementor-field-type-email input,
+.elementor-field-type-textarea textarea,
+.elementor-field-type-select select {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 12px;
+  font-family: var(--font-body);
+}
+
+.elementor-field-type-text input:focus,
+.elementor-field-type-email input:focus,
+.elementor-field-type-textarea textarea:focus,
+.elementor-field-type-select select:focus {
+  border-color: var(--color-cta-red);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(192, 0, 0, 0.1);
+}
+
+/* ========================================
+   Elementor Lists
+   ======================================== */
+
+.elementor-list-item {
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.elementor-list-item::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--color-cta-red);
+  font-weight: bold;
+}
+
+/* ========================================
+   Elementor Divider
+   ======================================== */
+
+.elementor-divider {
+  border-color: var(--color-border);
+}
+
+/* ========================================
+   Elementor Counter
+   ======================================== */
+
+.elementor-counter-number {
+  color: var(--color-cta-red);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.elementor-counter-title {
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   Elementor Testimonials
+   ======================================== */
+
+.elementor-testimonial {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.elementor-testimonial-text {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.elementor-testimonial-by {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+/* ========================================
+   Elementor Animations
+   ======================================== */
+
+.elementor-animation-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.elementor-animation-fadeIn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ========================================
+   Elementor Responsive
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .elementor-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .elementor-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .elementor-counter-number {
+    font-size: 2rem;
+  }
+
+  .elementor-column {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .elementor-section {
+    padding: 1rem 0.75rem;
+  }
+
+  .elementor h1 { font-size: 1.5rem; }
+  .elementor h2 { font-size: 1.25rem; }
+  .elementor h3 { font-size: 1.125rem; }
+}
+
+/* ========================================
+   Elementor Pro Features
+   ======================================== */
+
+.elementor-posts-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.elementor-post {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.elementor-post:hover {
+  border-color: var(--color-cta-red);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(192, 0, 0, 0.2);
+}
+
+.elementor-post-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* ========================================
+   Theme Builder Compatibility
+   ======================================== */
+
+.elementor-theme-builder-content {
+  min-height: calc(100vh - 200px);
+}
+
+/* Header adjustments */
+.elementor-location-header {
+  background-color: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Footer adjustments */
+.elementor-location-footer {
+  background-color: var(--color-elevated);
+  border-top: 1px solid var(--color-border);
+  padding: 3rem 2rem;
+}
